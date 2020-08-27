@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PromotionEngine.IServices;
 
 namespace PromotionEngine.Controllers
 {
@@ -6,10 +7,17 @@ namespace PromotionEngine.Controllers
     [ApiController]
     public class PromotionEngineController : ControllerBase
     {
+        private readonly ICheckoutService _checkoutService;
+
+        public PromotionEngineController(ICheckoutService checkoutService)
+        {
+            _checkoutService = checkoutService;
+        }
+
         [HttpGet("checkoutprice")]
         public ActionResult<int> CheckOutPrice(string inputSkuIds)
         {
             return Ok();
-        }
+        }        
     }
 }
