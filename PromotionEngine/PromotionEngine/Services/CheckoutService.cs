@@ -1,4 +1,5 @@
 ﻿using PromotionEngine.IServices;
+using PromotionEngine.Utils;
 using System.Linq;
 
 namespace PromotionEngine.Services
@@ -15,14 +16,14 @@ namespace PromotionEngine.Services
         public int GetCheckOutPrice(string inputSkuIds)
         {
             var listOfSkuIds = inputSkuIds.ToLower().ToCharArray();
-            var countOfA = listOfSkuIds.Count(character => character == 'a');
+            var countOfA = listOfSkuIds.Count(character => character == Constants.CharA);
             var priceOfA = _promotionService.GetPriceOfA(countOfA);
 
-            var countOfB = listOfSkuIds.Count(character => character == 'b');
+            var countOfB = listOfSkuIds.Count(character => character == Constants.CharB);
             var priceOfB = _promotionService.GetPriceOfB(countOfB);
 
-            var countOfC = listOfSkuIds.Count(character => character == 'c');
-            var countOfD = listOfSkuIds.Count(character => character == 'd');
+            var countOfC = listOfSkuIds.Count(character => character == Constants.CharC);
+            var countOfD = listOfSkuIds.Count(character => character == Constants.CharD);
             var priceOfCandD = _promotionService.GetPriceOfCandD(countOfC, countOfD);
 
             return (priceOfA + priceOfB + priceOfCandD);
