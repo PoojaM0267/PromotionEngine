@@ -41,8 +41,7 @@ namespace PromotionEngineTest.ServiceTests
 
             result.Should().Be(1125);
         }
-
-
+        
         [Fact]
         public void GetPriceOfCandD_Should_Return_Price_As_1200()
         {
