@@ -21,10 +21,11 @@ namespace PromotionEngine.Services
             var countOfB = listOfSkuIds.Count(character => character == 'b');
             var priceOfB = _promotionService.GetPriceOfB(countOfB);
 
+            var countOfC = listOfSkuIds.Count(character => character == 'c');
+            var countOfD = listOfSkuIds.Count(character => character == 'd');
+            var priceOfCandD = _promotionService.GetPriceOfCandD(countOfC, countOfD);
 
-
-
-            return 0;
+            return (priceOfA + priceOfB + priceOfCandD);
         }
     }
 }
