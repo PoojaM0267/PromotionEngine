@@ -1,5 +1,4 @@
-﻿
-namespace PromotionEngine.IServices
+﻿namespace PromotionEngine.IServices
 {
     public interface ICheckoutService
     {

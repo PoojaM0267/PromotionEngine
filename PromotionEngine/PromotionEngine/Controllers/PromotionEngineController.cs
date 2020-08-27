@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PromotionEngine.IServices;
-using System.Threading.Tasks;
 
 namespace PromotionEngine.Controllers
 {
