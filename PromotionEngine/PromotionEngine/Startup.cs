@@ -24,6 +24,7 @@ namespace PromotionEngine
         {
             // register services
             services.AddScoped<ICheckoutService, CheckoutService>();
+            services.AddScoped<IPromotionService, PromotionService>();
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
