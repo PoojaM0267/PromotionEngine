@@ -14,6 +14,11 @@ namespace PromotionEngine.Controllers
             _checkoutService = checkoutService;
         }
 
+        /// <summary>
+        /// CheckOutPrice
+        /// </summary>
+        /// <param name="inputSkuIds"> Input should be in the format: (aaabbbbbcd ....) </param>
+        /// <returns></returns>
         [HttpGet("checkoutprice")]
         public ActionResult<int> CheckOutPrice([FromQuery]string inputSkuIds)
         {
