@@ -25,8 +25,7 @@ export class PromotionEngineComponent {
 
     const input = this.InputRef.nativeElement.value;
 
-    const url = `${this.baseUrl}api/PromotionEngine/checkoutprice?inputSkuIds=${input}`;
-    
+    const url = `${this.baseUrl}api/PromotionEngine/checkoutprice?inputSkuIds=${input}`;    
 
     this.httpClient.get<number>(url).subscribe((result: number) => {
       this.totalPrice = result;
