@@ -18,6 +18,11 @@ namespace PromotionEngine.Services
             var countOfA = listOfSkuIds.Count(character => character == 'a');
             var priceOfA = _promotionService.GetPriceOfA(countOfA);
 
+            var countOfB = listOfSkuIds.Count(character => character == 'b');
+            var priceOfB = _promotionService.GetPriceOfB(countOfB);
+
+
+
 
             return 0;
         }
