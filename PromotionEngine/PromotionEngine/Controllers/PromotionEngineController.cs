@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PromotionEngine.IServices;
+using System.Threading.Tasks;
 
 namespace PromotionEngine.Controllers
 {
@@ -15,9 +16,15 @@ namespace PromotionEngine.Controllers
         }
 
         [HttpGet("checkoutprice")]
-        public ActionResult<int> CheckOutPrice(string inputSkuIds)
+        public ActionResult<int> CheckOutPrice([FromQuery]string inputSkuIds)
         {
-            return Ok();
+            if (!string.IsNullOrEmpty(inputSkuIds))
+            {
+                var result =  _checkoutService.GetCheckOutPrice(inputSkuIds);
+                return Ok(result); ;
+            }
+
+            return BadRequest();            
         }        
     }
 }

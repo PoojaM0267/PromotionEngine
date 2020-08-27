@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ServiceTests\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\PromotionEngine\PromotionEngine.csproj" />
   </ItemGroup>
 
